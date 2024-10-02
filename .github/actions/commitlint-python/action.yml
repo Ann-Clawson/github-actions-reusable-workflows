@@ -1,0 +1,19 @@
+name: "Commitlint Python Reusable Action"
+description: "Reusable action to lint commit messages for conventional compliance using opensource-nepal/commitlint"
+
+inputs:
+  branch:
+    description: "The branch to lint"
+    required: false
+    default: "main"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run commitlint
+      uses: opensource-nepal/commitlint@v1
+      # with:
+      #   branch: ${{ inputs.branch }}
