@@ -15,5 +15,5 @@ runs:
 
     - name: Run commitlint
       uses: opensource-nepal/commitlint@v1
-      # with:
-      #   branch: ${{ inputs.branch }}
+      with:
+        branch: ${{ inputs.branch }}
